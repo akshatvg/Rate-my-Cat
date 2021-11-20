@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RateMyCatWebApp<rate-my-cat>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.akshatvg.cat.RateMyCatWebApp",
+            "projectName": "rate-my-cat",
+            "args": ""
+        }
+    ]
+}

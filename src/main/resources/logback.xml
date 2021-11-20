@@ -3,5 +3,5 @@
     <include resource="org/springframework/boot/logging/logback/base.xml" />
     <logger name="org" level="WARN" />
     <logger name="com" level="INFO" />
-    <logger name="io.github.bonigarcia" level="DEBUG" />
+    <logger name="com.akshatvg.cat" level="DEBUG" />
 </configuration>

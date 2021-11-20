@@ -1,5 +1,5 @@
 /*
- * (C) Copyright 2017 Boni Garcia (https://bonigarcia.github.io/)
+ * (C) Copyright 2021 Akshat Gupta 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,10 @@
  * limitations under the License.
  *
  */
-package io.github.bonigarcia;
+package com.akshatvg.cat;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@SpringBootApplication
-public class RateMyCatWebApp {
+public interface CatRepository extends JpaRepository<Cat, Long> {
 
-    public static void main(String[] args) {
-        SpringApplication.run(RateMyCatWebApp.class, args);
-    }
 }

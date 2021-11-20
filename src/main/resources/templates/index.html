@@ -38,11 +38,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-6 col-md-4" th:each="cat: ${cats}">
-                    <a class="lightbox" data-toggle="modal" th:attr="data-target='#dialog'+${cat.id}" th:id="${cat.name}"><img th:src="@{${'./img/' + cat.pictureFileName}}" th:alt="${cat.name}" th:title="${cat.name}"></a>
+                    <a class="lightbox" data-toggle="modal" th:attr="data-target='#dialog'+${cat.id}"
+                        th:id="${cat.name}"><img th:src="@{${'./img/' + cat.pictureFileName}}" th:alt="${cat.name}"
+                            th:title="${cat.name}"></a>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 text-center"><small>Mastering JUnit 5 <br>Copyright &copy; Boni Garc&iacute;a 2017</small></div>
             </div>
         </div>
     </div>
@@ -52,31 +51,45 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><span th:text="${cat.name}"></span> <img th:src="@{${'./img/stars-' + cat.getHalfRoundedAverageRate() + '.png'}}" th:title="|Averge rate of ${cat.name}: ${cat.getAverageRateAsString()}|"></h2>
+                    <h2 class="modal-title"><span th:text="${cat.name}"></span> <img
+                            th:src="@{${'./img/stars-' + cat.getHalfRoundedAverageRate() + '.png'}}"
+                            th:title="|Averge rate of ${cat.name}: ${cat.getAverageRateAsString()}|"></h2>
                 </div>
-                <div class="modal-body"> <img class="img-responsive img-thumbnail" th:src="@{${'./img/' + cat.pictureFileName}}" th:alt="${cat.name}" th:title="${cat.name}">
-                    <form th:id="|form${cat.id}|" role="form" class="form-inline" th:action="@{/}" method="post" th:with="inCookies=${cat.inCookies}">
+                <div class="modal-body"> <img class="img-responsive img-thumbnail"
+                        th:src="@{${'./img/' + cat.pictureFileName}}" th:alt="${cat.name}" th:title="${cat.name}">
+                    <form th:id="|form${cat.id}|" role="form" class="form-inline" th:action="@{/}" method="post"
+                        th:with="inCookies=${cat.inCookies}">
                         <input id="catId" name="catId" type="hidden" th:value="${cat.id}">
 
-                        <input th:if="${inCookies}" id="stars" name="stars" class="rating rating-loading" data-show-clear="false" data-show-caption="true" th:value="${cat.getStarsInCookies()}" disabled>
-                        <input th:unless="${inCookies}" id="stars" name="stars" class="rating rating-loading" data-show-clear="false" data-show-caption="true">
+                        <input th:if="${inCookies}" id="stars" name="stars" class="rating rating-loading"
+                            data-show-clear="false" data-show-caption="true" th:value="${cat.getStarsInCookies()}"
+                            disabled>
+                        <input th:unless="${inCookies}" id="stars" name="stars" class="rating rating-loading"
+                            data-show-clear="false" data-show-caption="true">
 
                         <h4 th:if="${inCookies}" th:text="${cat.getCommentInCookies()}"></h4>
-                        <input th:unless="${inCookies}" id="comment" name="comment" type="text" class="form-control" th:placeholder="|Your comments about ${cat.name}|">
+                        <input th:unless="${inCookies}" id="comment" name="comment" type="text" class="form-control"
+                            th:placeholder="|Your comments about ${cat.name}|">
 
-                        <button th:unless="${inCookies}" type="submit" class="btn btn-success">Send vote &nbsp; <span class="pull-right"><span class="glyphicon glyphicon-hand-right"></span></span></button>
+                        <button th:unless="${inCookies}" type="submit" class="btn btn-success">Send vote &nbsp; <span
+                                class="pull-right"><span class="glyphicon glyphicon-hand-right"></span></span></button>
                     </form>
                     <br>
-                    <div th:if="${cat.getOpinionsSize() > 0}" th:id="|carousel${cat.id}|" class="carousel slide" data-ride="carousel">
+                    <div th:if="${cat.getOpinionsSize() > 0}" th:id="|carousel${cat.id}|" class="carousel slide"
+                        data-ride="carousel">
                         <h4 th:text="|Other opinions about ${cat.name}|"></h4>
                         <div class="carousel-inner">
-                            <div th:each="opinion, it: ${cat.opinions}" th:class="${it.index == 0} ? 'item active' : 'item'" th:unless="${opinion.isInCookies()}">
+                            <div th:each="opinion, it: ${cat.opinions}"
+                                th:class="${it.index == 0} ? 'item active' : 'item'"
+                                th:unless="${opinion.isInCookies()}">
                                 <div class="row">
                                     <div class="col-xs-12">
                                         <div class="thumbnail adjust1">
                                             <div class="col-xs-12">
                                                 <div class="caption text-center">
-                                                    <p class="text-info lead adjust2"><img th:src="@{${'./img/stars-' + opinion.getHalfRoundedStars() + '.png'}}"></p>
+                                                    <p class="text-info lead adjust2"><img
+                                                            th:src="@{${'./img/stars-' + opinion.getHalfRoundedStars() + '.png'}}">
+                                                    </p>
                                                     <p th:text="${opinion.comment}"></p>
                                                 </div>
                                             </div>
@@ -85,8 +98,10 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="left carousel-control" th:href="|#carousel${cat.id}|" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span> </a>
-                        <a class="right carousel-control" th:href="|#carousel${cat.id}|" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span> </a>
+                        <a class="left carousel-control" th:href="|#carousel${cat.id}|" data-slide="prev"><span
+                                class="glyphicon glyphicon-chevron-left"></span> </a>
+                        <a class="right carousel-control" th:href="|#carousel${cat.id}|" data-slide="next"><span
+                                class="glyphicon glyphicon-chevron-right"></span> </a>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -96,4 +111,5 @@
         </div>
     </div>
 </body>
+
 </html>

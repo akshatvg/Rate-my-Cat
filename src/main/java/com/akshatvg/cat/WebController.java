@@ -1,5 +1,5 @@
 /*
- * (C) Copyright 2017 Boni Garcia (https://bonigarcia.github.io/)
+ * (C) Copyright 2021 Akshat Gupta 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
  * limitations under the License.
  *
  */
-package io.github.bonigarcia;
+package com.akshatvg.cat;
 
-import static io.github.bonigarcia.CookiesService.COOKIE_NAME;
+import static com.akshatvg.cat.CookiesService.COOKIE_NAME;
 
 import java.util.List;
 import java.util.Locale;

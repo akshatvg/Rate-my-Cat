@@ -1,5 +1,5 @@
 /*
- * (C) Copyright 2017 Boni Garcia (https://bonigarcia.github.io/)
+ * (C) Copyright 2021 Akshat Gupta 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  */
-package io.github.bonigarcia.test.unit;
+package com.akshatvg.cat.test.unit;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -35,10 +35,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import io.github.bonigarcia.Cat;
-import io.github.bonigarcia.CatException;
-import io.github.bonigarcia.CatRepository;
-import io.github.bonigarcia.CatService;
+import com.akshatvg.cat.Cat;
+import com.akshatvg.cat.CatException;
+import com.akshatvg.cat.CatRepository;
+import com.akshatvg.cat.CatService;
 
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Unit tests (black-box): rating cats")
