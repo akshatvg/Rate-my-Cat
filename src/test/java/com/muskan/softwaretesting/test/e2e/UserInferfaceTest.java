@@ -37,8 +37,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.muskan.softwaretesting.seljup.Arguments;
-import com.muskan.softwaretesting.seljup.SeleniumJupiter;
+import io.github.bonigarcia.seljup.Arguments;
+import io.github.bonigarcia.seljup.SeleniumJupiter;
 
 @ExtendWith({ SpringExtension.class, SeleniumJupiter.class })
 @SpringBootTest(webEnvironment = RANDOM_PORT)
