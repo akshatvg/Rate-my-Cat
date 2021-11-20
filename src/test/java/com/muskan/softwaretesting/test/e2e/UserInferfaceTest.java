@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  */
-package io.github.bonigarcia.test.e2e;
+package com.muskan.softwaretesting.test.e2e;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -37,8 +37,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import io.github.bonigarcia.seljup.Arguments;
-import io.github.bonigarcia.seljup.SeleniumJupiter;
+import com.muskan.softwaretesting.seljup.Arguments;
+import com.muskan.softwaretesting.seljup.SeleniumJupiter;
 
 @ExtendWith({ SpringExtension.class, SeleniumJupiter.class })
 @SpringBootTest(webEnvironment = RANDOM_PORT)
