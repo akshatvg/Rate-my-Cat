@@ -6,7 +6,7 @@
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
-            "mainClass": "com.akshatvg.cat.RateMyCatWebApp",
+            "mainClass": "com.muskan.softwaretesting.RateMyCatWebApp",
             "projectName": "rate-my-cat",
             "args": ""
         }

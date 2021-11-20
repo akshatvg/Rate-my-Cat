@@ -1,5 +1,5 @@
 /*
- * (C) Copyright 2021 Akshat Gupta 
+ * (C) Copyright 2021 Muskan Rastogi 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
  * limitations under the License.
  *
  */
-package com.akshatvg.cat;
+package com.muskan.softwaretesting;
 
-import static com.akshatvg.cat.CookiesService.COOKIE_NAME;
+import static com.muskan.softwaretesting.CookiesService.COOKIE_NAME;
 
 import java.util.List;
 import java.util.Locale;

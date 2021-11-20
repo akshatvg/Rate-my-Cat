@@ -1,5 +1,5 @@
 /*
- * (C) Copyright 2021 Akshat Gupta 
+ * (C) Copyright 2021 Muskan Rastogi 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,10 +14,13 @@
  * limitations under the License.
  *
  */
-package com.akshatvg.cat;
+package com.muskan.softwaretesting;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+public class CatException extends RuntimeException {
 
-public interface CatRepository extends JpaRepository<Cat, Long> {
+    private static final long serialVersionUID = 1L;
 
+    public CatException(String cause) {
+        super(cause);
+    }
 }
